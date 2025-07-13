@@ -149,6 +149,10 @@ body {
   .item-card p {
     margin: 0;
   }
+  .anc{
+  text-decoration: none;  /* removes underline */
+  color: inherit;         /* uses the current text color */
+}
   
   .search-input {
     width: 100%;
@@ -181,4 +185,52 @@ body {
   .chat-box .bot {
     color: #c9d1d9;
   }
-  
+  footer {
+  background-color: #161b22;
+  padding: 30px 20px;
+  color: #c9d1d9;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #30363d;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.footer-content > div {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px 0;
+}
+
+.footer-content h3,
+.footer-content h4 {
+  color: #58a6ff;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content ul li a {
+  color: #c9d1d9;
+  text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+  color: #58a6ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #30363d;
+  padding-top: 10px;
+  color: #8b949e;
+}
