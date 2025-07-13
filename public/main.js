@@ -48,7 +48,7 @@ document.getElementById('search-button').addEventListener('click', function() {
     input.value = '';
   
     try {
-      const res = await fetch('https://campusconnect-qg7w.onrender.com2/api/chat', {
+      const res = await fetch('https://campusconnect-qg7w.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message })
