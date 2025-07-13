@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link rel="stylesheet" type="text/css" href="/index.css" />
+</head>
+<body>
+  <header>
+    <h1>CampusConnect</h1>
+    <p>Your integrated hub for university life. Find what you need, connect with people, and stay updated.</p>
+  </header>
+
+  <nav>
+    <button class="tab-button active" onclick="switchTab('lostFound')">Lost & Found</button>
+    <button class="tab-button" onclick="switchTab('faculty')">Faculty</button>
+    <button class="tab-button" onclick="switchTab('alumni')">Alumni</button>
+    <button class="tab-button" onclick="switchTab('clubs')">Clubs</button>
+    <button class="tab-button" onclick="switchTab('schedule')">Schedule</button>
+    <button class="tab-button" onclick="switchTab('search')">Smart Search</button>
+  </nav>
+
+  <div id="lostFound" class="section">
+    <h2>Lost & Found</h2>
+    <p>Lost something? Found something? Post it here or search for your item.</p>
+    <div class="form-group">
+      <input type="text" id="itemTitle" placeholder="e.g., Black Leather Wallet">
+      <textarea id="itemDesc" placeholder="e.g., Found near the library, has a student ID inside."></textarea>
+      <button onclick="submitItem()">Submit an Item</button>
+    </div>
+    <input type="text" class="search-input" id="searchBox" placeholder="Use natural language to search..." oninput="searchItems()">
+    <div id="itemsContainer">
+      <div class="item-card">
+        <h3>Lost Black Wallet</h3>
+        <p>Posted over 1 year ago</p>
+        <p>Lost a black leather wallet near the main library. Contains student ID.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="faculty" class="section hidden">
+    <h2>Faculty Information</h2>
+    <div class="item-card">
+      <h3>Dr. Neha Sharma</h3>
+      <p>Department: CSE</p>
+      <p>Email: neha@university.edu</p>
+    </div>
+    <div class="item-card">
+      <h3>Dr. Poonam Dabas</h3>
+      <p>Department: CSE</p>
+      <p>Email: hodcse@kuk.ac.in</p>
+    </div>
+    <div class="item-card">
+      <h3>Dr. Atul Sharma</h3>
+      <p>Department: ECE</p>
+      <p>Email: atulece@kuk.ac.in</p>
+    </div>
+  </div>
+
+  <div id="alumni" class="section hidden">
+    <h2>Alumni Directory</h2>
+    <div class="item-card">
+      <h3>Ravi Kumar</h3>
+      <p>Batch: 2019, Department: Mechanical</p>
+      <p>Now at: Infosys</p>
+    </div>
+    <div class="item-card">
+      <h3>Gorav Singh</h3>
+      <p>Batch: 2016, Department: CSE</p>
+      <p>Now at: Nirmans labs</p>
+    </div>
+    <div class="item-card">
+      <h3>Nisha verma</h3>
+      <p>Batch: 2019, Department: ECE</p>
+      <p>Now at: Microsoft</p>
+    </div>
+  </div>
+
+  <div id="clubs" class="section hidden">
+    <h2>Clubs and Events</h2>
+    <div class="item-card">
+      <h3>AI Club</h3>
+      <p>Next Event: AI Hackathon on 15 July</p>
+    </div>
+    <div class="item-card">
+      <h3>GDGC Club</h3>
+      <p>Next Event:  Hackathon on 25 July</p>
+    </div>
+    <div class="item-card">
+      <h3>Drama Club</h3>
+      <p>Next Event: drama show on 5 July</p>
+    </div>
+  </div>
+
+  <div id="schedule" class="section hidden">
+    <h2>Class Schedule</h2>
+    <div class="item-card">
+      <h3>CSE 2nd Year</h3>
+      <p>9AM-10AM: Data Structures<br>10AM-11AM: DBMS</p>
+    </div>
+    <div class="item-card">
+      <h3>ECE 2nd Year</h3>
+      <p>9AM-10AM: Basic Electronics<br>10AM-11AM: DSA</p>
+    </div>
+    <div class="item-card">
+      <h3>Mech. 2nd Year</h3>
+      <p>9AM-10AM: Fluid mechnics<br>10AM-11AM: EGD</p>
+    </div>
+  </div>
+
+  <div id="search" class="section hidden">
+    <h2>Smart Search</h2>
+    <div id="chatBox" class="chat-box"></div>
+    <div class="form-group">
+      <input type="text" id="chatInput" placeholder="Ask your question..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  
+
+  <script src="/main.js"></script>
+</body>
+</html>
