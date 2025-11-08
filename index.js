@@ -30,7 +30,7 @@ app.post('/api/chat', async (req, res) => {
       {
         headers: {
           'Content-Type': 'application/json',
-          'x-goog-api-key': 'AIzaSyBx_erx8IfiDpzBzKInmoRW_Xu1BWng7Iw' // your API key here
+          'x-goog-api-key': 'AIzaSyBRGi3bmHwHJzdWJJrSowq9WWkrbHtXOgY' // your API key here
         }
       }
     );
